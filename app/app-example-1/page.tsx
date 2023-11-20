@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <h1>Index (app router)</h1>
-      <Link href={"/app-example-1"}>/app-example-1</Link>
+      <h1>app-example-1</h1>
+      <Link href={"/"}>index</Link>
       <br />
       <Link href={"/pages-example-1"}>/pages-example-1</Link>
     </>

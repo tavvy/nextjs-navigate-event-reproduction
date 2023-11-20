@@ -1,3 +1,5 @@
+import { Html, Head, Main, NextScript } from "next/document";
+
 const webVitalsJsSnippet = `
 (function () {
   var script = document.createElement('script');
@@ -11,13 +13,16 @@ const webVitalsJsSnippet = `
   document.head.appendChild(script);
 })();`;
 
-export default function RootLayout({ children }) {
+export default function Document() {
   return (
-    <html>
-      <head>
+    <Html lang="en">
+      <Head>
         <script dangerouslySetInnerHTML={{ __html: webVitalsJsSnippet }} />
-      </head>
-      <body>{children}</body>
-    </html>
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
   );
 }
